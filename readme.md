@@ -83,6 +83,9 @@ Here's an image illustrating the grid layout.
 - [*] Grid control
 - [*] it'd be nice if delay kill applied to the right buffer
 - [*] Make the dials update properly when loading settings
+- [ ] Add delay rec toggle to the main UI
+- [ ] Allow delay softcut rate to be changed to get half speed loops
+- [ ] Configurable octave range
 - [ ] It'd be nice to show numbers when using the dials
 - [ ] MIDI config required?
 - [ ] MIDI grid?

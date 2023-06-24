@@ -7,8 +7,8 @@ local LFO_RESOLUTION = 100
 local LFO_TIMER_INTERVAL = (math.pi * 2) / LFO_RESOLUTION
 local LFO_RATE_MAX = 100
 local LFO_TOTAL_TIME = 2 * math.pi
-local LFO_BITS_BASE = 8
-local LFO_BITS_MAX = 24
+local LFO_BITS_BASE = 6
+local LFO_BITS_MAX = 32
 
 local LFO = {
   lfos = {},
@@ -267,7 +267,11 @@ function LFO:apply_action()
     LFO.last_release_value = release
     ui_state["lfo" .. self.params_id].release = release
   elseif target == LFO_TARGET_BITS then
-    local bits = scale_range(value + params:get("bits"), LFO_BITS_BASE, LFO_BITS_MAX)
+    local range = LFO_BITS_MAX - LFO_BITS_BASE
+    local scaled = (value + 1) / 2
+    local converted = math.floor((scaled * range) + LFO_BITS_BASE)
+    local offset = params:get("bits") - range / 2
+    local bits = util.clamp(converted + offset, LFO_BITS_BASE, LFO_BITS_MAX)
     ui_state["lfo" .. self.params_id].bits = bits
     if engine.bits ~= nil then
       engine.bits(bits)

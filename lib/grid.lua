@@ -74,6 +74,7 @@ function g.key(x, y, z)
     local velocity = (g.device.rows - grid_velocity + 1) / g.device.rows
     engine.amp(util.clamp(velocity * params:get("gain"), 0.0, 1.0))
     engine.hz(MusicUtil.note_num_to_freq(note))
+    -- TODO: Add UI
     print("Playing note: " .. note .. " / " .. MusicUtil.note_num_to_name(note))
   end
   -- set velocity
@@ -90,11 +91,9 @@ function g.key(x, y, z)
   end
   -- toggle delay recording
   if z == 1 and x == SHORT_DELAY_REC_GRID_X and y == SHORT_DELAY_REC_GRID_Y then
-    print("toggling rec 1")
     delays.toggle_rec(1)
   end
   if z == 1 and x == LONG_DELAY_REC_GRID_X and y == LONG_DELAY_REC_GRID_Y then
-    print("toggling rec 2")
     delays.toggle_rec(2)
   end
   g:refresh()

@@ -112,7 +112,6 @@ end
 
 local function handle_midi_event(data)
   local msg = midi.to_msg(data)
-  print("handle_midi_event" .. msg.type)
   if msg.type == "note_on" then
     local note = msg.note
     local velocity = msg.vel / 128

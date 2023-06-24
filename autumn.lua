@@ -1,11 +1,12 @@
 -- Autumn (v0.0.1)
 --
--- A simple synth playable with MIDI or the grid,
--- featuring two delays and LFOs.
+-- A simple synth playable with
+-- MIDI or the grid,
+-- featuring two delays and LFOs
 --
 -- written by ambalek for
 -- the norns community
---
+
 -- luacheck: globals redraw init include screen util enc params midi key engine softcut audio clock ui_state
 engine.name = 'AutumnStandalone'
 

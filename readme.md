@@ -14,6 +14,16 @@ Features:
 * Three LFOs
 * Simple chromatic grid with a way to handle velocity and manage the delays
 
+## Installation
+
+Until this is released in the norns community scripts, open Maiden and run this command:
+
+```
+;install https://github.com/ambalek/autumn
+```
+
+Remember to restart norns because Autumn uses a custom Supercollider engine.
+
 ## Usage
 
 The UI is designed around dials and buttons that reflect the layout of the buttons on norns. Here's an example.

@@ -1,4 +1,4 @@
--- Autumn (v0.0.1)
+-- Autumn (v0.0.2)
 --
 -- A simple synth playable with
 -- MIDI or the grid,

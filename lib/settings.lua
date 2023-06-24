@@ -17,7 +17,7 @@ local function setup_params()
   end)
 
   params:add_separator("envelope")
-  params:add_taper("attack", "attack", 0, 10, 0.1, 0.0001, "seconds")
+  params:add_taper("attack", "attack", 0, 10, 0.0, 0.0001, "seconds")
   params:set_action("attack", function(value)
     engine.attack(value)
   end)

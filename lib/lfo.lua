@@ -67,8 +67,8 @@ function LFO.init()
     ui_state["lfo" .. i].target = LFO.TARGETS[params:get("lfo_" .. i .. "_target")]
     params:add_number("lfo_" .. i .. "_rate", "lfo " .. i .. " rate", 1, LFO_RATE_MAX, 90)
     params:add_option("lfo_" .. i .. "_shape", "lfo " .. i .. " shape", LFO.SHAPES, LFO_SINE)
-    params:add_taper("lfo_" .. i .. "_min", "lfo " .. i .. " min", 0, 1, 0, 0.01)
-    params:add_taper("lfo_" .. i .. "_max", "lfo " .. i .. " max", 0, 1, 1, 0.01)
+    params:add_taper("lfo_" .. i .. "_min", "lfo " .. i .. " min", 0, 1, 0.4, 0.01)
+    params:add_taper("lfo_" .. i .. "_max", "lfo " .. i .. " max", 0, 1, 0.6, 0.01)
     local active = 1
     if i == 1 then
       active = 2

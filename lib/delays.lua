@@ -4,7 +4,6 @@ local rec_state = { 1, 1 }
 local function softcut_delay(voice, time, feedback, rate, level)
   softcut.buffer(voice, voice)
   softcut.level(voice, level)
-  -- audio.level_eng_cut(1.0)
   softcut.level_slew_time(voice, 0)
   softcut.level_input_cut(1, voice, 1.0)
   softcut.level_input_cut(2, voice, 1.0)
@@ -38,6 +37,9 @@ end
 
 local function softcut_setup()
   softcut.reset()
+  audio.level_cut(1.0)
+  audio.level_adc_cut(1.0)
+  audio.level_eng_cut(1.0)
   apply_delays()
 end
 
@@ -51,7 +53,6 @@ local function toggle_rec(voice)
   else
     rec_state[voice] = 1
   end
-  print("toggle_rec: " .. voice .. " / " .. rec_state[voice])
   softcut.rec(voice, rec_state[voice])
 end
 

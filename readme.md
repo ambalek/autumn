@@ -65,7 +65,11 @@ Here's an image illustrating the grid layout.
 
 ![LFO](img/grid.png)
 
-### To-do
+## Shouts
+
+* [Peter Bark](https://www.instagram.com/peterbarkmusic/) suggested this script idea (playable Fall) to me on Instagram
+
+## To-do
 
 - [*] Basic UI design
 - [*] Delays

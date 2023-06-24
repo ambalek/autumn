@@ -71,18 +71,17 @@ Here's an image illustrating the grid layout.
 
 ## To-do
 
-- [*] Basic UI design
-- [*] Delays
-- [*] Settings
-- [*] Basic LFOs
-- [*] Create a way to allow LFOs to modify the params instead of the engine, because dials need to have their state updated as well
-- [*] Pressing shift toggles different LFO values
-- [*] Finish linking up LFOs to dials -- "l del" and "s del" might need to be renamed
-- [*] Add panning as an LFO
-- [?] Grid research: is there a lib for grid keyboards?
-- [*] Grid control
-- [*] it'd be nice if delay kill applied to the right buffer
-- [*] Make the dials update properly when loading settings
+- [x] Basic UI design
+- [x] Delays
+- [x] Settings
+- [x] Basic LFOs
+- [x] Create a way to allow LFOs to modify the params instead of the engine, because dials need to have their state updated as well
+- [x] Pressing shift toggles different LFO values
+- [x] Finish linking up LFOs to dials -- "l del" and "s del" might need to be renamed
+- [x] Add panning as an LFO
+- [x] Grid control
+- [x] it'd be nice if delay kill applied to the right buffer
+- [x] Make the dials update properly when loading settings
 - [ ] Add delay rec toggle to the main UI
 - [ ] Allow delay softcut rate to be changed to get half speed loops
 - [ ] Configurable octave range

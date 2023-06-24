@@ -1,6 +1,4 @@
 -- luacheck: globals params engine softcut include
-local delays = include("lib/delays")
-
 local settings = {
   max_loop_length = 50
 }
@@ -48,16 +46,16 @@ local function setup_params()
   params:add_taper("short_delay_level", "short delay gain", 0, 1, 0.4, 0.01, "")
   params:set_action("short_delay_level", function(value) softcut.level(1, value) end)
   params:add_taper("short_delay_feedback", "short delay feedback", 0, 1, 0.5, 0.01)
-  params:set_action("short_delay_feedback", function()
-    delays.apply_delays()
+  params:set_action("short_delay_feedback", function(value)
+    softcut.pre_level(1, value)
   end)
   params:add_taper("long_delay_time", "long delay", 1, settings.max_loop_length, 10, 0.1, "sec")
   params:set_action("long_delay_time", function(value) softcut.loop_end(2, value) end)
   params:add_taper("long_delay_level", "long delay gain", 0, 1, 0.6, 0.01, "")
   params:set_action("long_delay_level", function(value) softcut.level(2, value) end)
   params:add_taper("long_delay_feedback", "long delay feedback", 0, 1, 0.5, 0.01)
-  params:set_action("long_delay_feedback", function()
-    delays.apply_delays()
+  params:set_action("long_delay_feedback", function(value)
+    softcut.pre_level(1, value)
   end)
 end
 

@@ -82,6 +82,7 @@ Here's an image illustrating the grid layout.
 - [x] Grid control
 - [x] it'd be nice if delay kill applied to the right buffer
 - [x] Make the dials update properly when loading settings
+- [ ] Key tracking
 - [ ] Add delay rec toggle to the main UI
 - [ ] Allow delay softcut rate to be changed to get half speed loops
 - [ ] Configurable octave range
